@@ -13,13 +13,13 @@ const PostDetail = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setDetail(data));
-    }, [])
+    }, [id])
     useEffect(() => {
         const url = `https://jsonplaceholder.typicode.com/photos?id=${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setPhotos(data))
-    }, [])
+    }, [id])
     return (
         <div>
             <h2>Id: {detail.id}</h2>
